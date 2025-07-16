@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>萤瓷夜语 抽卡系统</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+    <div class="logo"><img src="assets/logo.png" alt="蝴蝶Logo"></div>
+    <div class="main">
+        <h1>萤瓷夜语 抽卡系统</h1>
+        <div id="start-screen">
+            <input type="text" id="nickname" placeholder="请输入昵称">
+            <select id="role">
+                <option value="寒蝉">寒蝉</option>
+                <option value="萤火">萤火</option>
+                <option value="斧螳">斧螳</option>
+                <option value="姬盲">姬盲</option>
+                <option value="天蛛">天蛛</option>
+                <option value="玄驹">玄驹</option>
+                <option value="蜂">蜂</option>
+            </select>
+            <button onclick="startGame()">进入抽卡</button>
+        </div>
+        <div id="card-screen" style="display:none;">
+            <p>玩家：<span id="player-name"></span>（角色：<span id="player-role"></span>）</p>
+            <button onclick="drawCard()">抽一张牌</button>
+            <div id="card-display"></div>
+            <div id="card-result" style="margin-top: 10px;"></div>
+            <div style="margin-top: 10px;">
+                <button onclick="completeTask()">完成任务</button>
+                <button onclick="failTask()">放弃任务</button>
+            </div>
+            <h3>任务记录</h3>
+            <ul id="history-log"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
